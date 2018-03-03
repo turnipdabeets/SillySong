@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-LightItalic</string>
+        </array>
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="61n-s5-4zP">
+                                <rect key="frame" x="70" y="269" width="235" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="IaO-cQ-YUK"/>
+                                    <constraint firstAttribute="height" constant="101" id="PyG-EH-xva"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkx-4A-Hmt">
+                                <rect key="frame" x="106" y="196" width="162" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="gSM-0w-juf"/>
+                                    <constraint firstAttribute="height" constant="30" id="uez-m7-eRy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyric:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wLa-5T-u6H"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="3nr-kh-E8t"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Silly Song!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-Ot-XAL">
+                                <rect key="frame" x="64" y="42" width="246" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="Ee2-fM-C0X"/>
+                                    <constraint firstAttribute="height" constant="70" id="aRn-Md-mDT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <color key="textColor" red="1" green="0.23326822189999999" blue="0.70452461759999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Let's generate a silly song using your name!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zMx-YM-WdI">
+                                <rect key="frame" x="41" y="120" width="292" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="WeP-OD-L87"/>
+                                    <constraint firstAttribute="height" constant="34" id="yTH-pY-Duc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97456045873424546" green="0.97456045873424546" blue="0.97456045873424546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zMx-YM-WdI" firstAttribute="top" secondItem="NhA-Ot-XAL" secondAttribute="bottom" constant="8" id="AmM-4z-dC1"/>
+                            <constraint firstItem="NhA-Ot-XAL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dnl-vU-vs0"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ECn-N6-U9s"/>
+                            <constraint firstItem="zMx-YM-WdI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="KNX-bN-Zgh"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="NPa-YV-0PL"/>
+                            <constraint firstItem="Qkx-4A-Hmt" firstAttribute="top" secondItem="NhA-Ot-XAL" secondAttribute="bottom" constant="65" id="NQA-a2-vQK"/>
+                            <constraint firstItem="Qkx-4A-Hmt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RKZ-Bx-GDt"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rvv-q1-YMn"/>
+                            <constraint firstItem="NhA-Ot-XAL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Txi-va-XxH"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="top" secondItem="Qkx-4A-Hmt" secondAttribute="bottom" constant="43" id="VZE-p9-HlQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMx-YM-WdI" secondAttribute="trailing" constant="42" id="bbd-PF-KP5"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bd3-9P-rob"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cui-du-uvT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="61n-s5-4zP" secondAttribute="trailing" constant="70" id="fyw-Pc-kPz"/>
+                            <constraint firstItem="61n-s5-4zP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="rZW-gD-Zr4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="61n-s5-4zP" id="i19-Ik-0Td"/>
+                        <outlet property="nameField" destination="Qkx-4A-Hmt" id="Q6K-4n-yuN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
